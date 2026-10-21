@@ -19,21 +19,21 @@ When the environment is active, the terminal prompt should look like this:
 ```
 Next, install the required packages. 
 ```
-conda install -c conda-forge meeko
-conda install -c conda-forge vina
-conda install -c conda-forge rDock
+conda install -c conda-forge meeko vina rDock obabel mdanalysis pdb2pqr
 ```
 In order to run the snakemake file, use the following command.
 ```
 snakemake -s Snakefile.smk -c 1 --use-conda
 ```
-To deactivate the conda environment, simply run the following command:
+To deactivate the conda environment, run the following command:
 ```
 conda deactivate docking_pipeline
 ```
 ### Colab script: GNINA
 A link to the original script can be found here:
 https://colab.research.google.com/github/MolSSI-Education/iqb-2025/blob/main/04_Cheminfo_crash_course.ipynb 
+Current edits to run code on 1bzc are shown here:
+https://colab.research.google.com/drive/13wA-c4P7b5n2CX9TgKDV5iN-RPrlenSr#scrollTo=uRm7Jby4V6Pq
 
 ### Inputs
 The initial input is shown in sample_data, with each subdirectory corresponding to a pdb code. The files in each subdirectory correspond to .pdb formats for the protein and binding pocket, .mol2 for the protein, ligand, and geometry optimized ligand, and .sdf for the ligand. The inputs for each section of analysis are shown in the snakemake. 
