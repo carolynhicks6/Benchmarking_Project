@@ -25,7 +25,7 @@ conda install -c conda-forge rDock
 ```
 In order to run the snakemake file, use the following command.
 ```
-snakemake -s Snakefile.smk -c 1
+snakemake -s Snakefile.smk -c 1 --use-conda
 ```
 To deactivate the conda environment, simply run the following command:
 ```
@@ -39,5 +39,5 @@ https://colab.research.google.com/github/MolSSI-Education/iqb-2025/blob/main/04_
 The initial input is shown in sample_data, with each subdirectory corresponding to a pdb code. The files in each subdirectory correspond to .pdb formats for the protein and binding pocket, .mol2 for the protein, ligand, and geometry optimized ligand, and .sdf for the ligand. The inputs for each section of analysis are shown in the snakemake. 
 
 ### Expected outputs
-
+The outputs for Autodock Vina is a .pdbqt file, GNINA is a .sdf file, and rDock is a .sd file. These coordinate files contain ranked poses and scoring data. 
  
